@@ -2,7 +2,7 @@
   <div class="recommend">
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -16,25 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1907/40/401b7b735008f7f4a3.img.jpg_200x200_10ce515e.jpg',
-        title: '西溪国家湿地公园',
-        desc: '美若仙境，《非诚勿扰》取景地'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/e6/e646f4221574cc2a90.water.jpg_200x200_d9b6cabd.jpg',
-        title: '双溪竹海漂流',
-        desc: '江南惊险漂流，水清、竹多、落差大'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1907/f7/f79edee59782fc4ba3.water.jpg_200x200_dece4a5d.jpg',
-        title: '宋城千古情',
-        desc: '世界三大名秀之一，杭州宋城的灵魂'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
