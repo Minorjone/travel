@@ -33,13 +33,13 @@ export default {
 </script>
 <style lang='stylus' scoped>
 .wrapper >>> .swiper-pagination-bullet-active
-    background: #fff !important
+  background: #fff !important
 .wrapper
+  width: 100%
+  height: 0
+  overflow: hidden
+  padding-bottom: 26.5%
+  background: #eee
+  .swiper-img
     width: 100%
-    height: 0
-    overflow: hidden
-    padding-bottom: 26.5%
-    background: #eee
-    .swiper-img
-        width: 100%
 </style>
